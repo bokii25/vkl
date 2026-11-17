@@ -1,0 +1,309 @@
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 36px 20px 64px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #fdfaf3;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.badge {
+  color: #e5b96b;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+}
+
+.title {
+  font-size: clamp(34px, 5vw, 50px);
+  font-style: italic;
+  color: #fdfaf3;
+  margin: 4px 0 8px;
+}
+
+.sub {
+  font-size: 19px;
+  color: #d9ccb6;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.45;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  color: #b8a88a;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  background-color: #241c16;
+  border: 1px solid #382a16;
+  border-radius: 12px;
+  padding: 13px 42px;
+  color: #fdfaf3;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: #e5b96b;
+}
+
+.clearBtn {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #b8a88a;
+  cursor: pointer;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.catBtn {
+  background-color: #1b1510;
+  border: 1px solid #382a16;
+  color: #d9ccb6;
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.catBtn:hover {
+  border-color: #e5b96b;
+  color: #e5b96b;
+}
+
+.catActive {
+  background-color: #e5b96b;
+  border-color: #e5b96b;
+  color: #1c160f;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background-color: #241c16;
+  border: 1px solid #382a16;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #e5b96b;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.grammar {
+  font-size: 13px;
+  color: #e5b96b;
+  background-color: rgba(229, 185, 107, 0.1);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.catTag {
+  font-size: 13px;
+  color: #b8a88a;
+}
+
+.cardWord {
+  font-size: 30px;
+  color: #fdfaf3;
+  line-height: 1.1;
+}
+
+.cardLatin {
+  font-size: 15px;
+  color: #b8a88a;
+  margin-bottom: 10px;
+}
+
+.cardMeaning {
+  font-size: 17px;
+  color: #e6dac6;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.inspectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: #e5b96b;
+  font-weight: 700;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: #b8a88a;
+  font-size: 20px;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(12, 9, 6, 0.82);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 60;
+}
+
+.modalCard {
+  position: relative;
+  max-width: 560px;
+  width: 100%;
+  background-color: #f2e7d4;
+  color: #241911;
+  border: 1px solid #d8c39e;
+  border-radius: 14px;
+  padding: 30px 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+  animation: popIn 0.25s ease;
+}
+
+.closeModal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(36, 25, 17, 0.08);
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  color: #241911;
+  cursor: pointer;
+}
+
+.closeModal:hover {
+  background: rgba(122, 28, 28, 0.15);
+  color: #7a1c1c;
+}
+
+.modalBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7a1c1c;
+  margin-bottom: 6px;
+}
+
+.modalHead {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  border-bottom: 1px solid rgba(122, 28, 28, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.modalHead h2 {
+  font-size: 42px;
+  color: #241911;
+  line-height: 1.05;
+}
+
+.modalGrammar {
+  font-size: 17px;
+  color: #7a1c1c;
+  font-style: italic;
+}
+
+.transBox {
+  background-color: rgba(36, 25, 17, 0.06);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.section {
+  margin-bottom: 14px;
+}
+
+.section h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #7a1c1c;
+  margin-bottom: 3px;
+}
+
+.section p {
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+.proverb {
+  border-left: 3px solid #7a1c1c;
+  padding-left: 12px;
+  margin-top: 16px;
+  font-style: italic;
+  font-size: 19px;
+  color: #3d2e22;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
