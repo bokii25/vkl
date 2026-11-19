@@ -103,9 +103,9 @@
 }
 
 .catActive {
-  background-color: #e5b96b;
+  /* background-color: #e5b96b; */
   border-color: #e5b96b;
-  color: #1c160f;
+  /* color: #1c160f; */
   font-weight: 700;
 }
 
@@ -296,6 +296,7 @@
   font-size: 19px;
   color: #3d2e22;
 }
+
 
 @keyframes popIn {
   from {
